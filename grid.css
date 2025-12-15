@@ -1,61 +1,57 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
-    background-image: url(https://cdn.imgchest.com/files/myd5crddq4b.png);
-    background-repeat: no-repeat;
-    max-width: 1143px;
-    min-height: 1583px;
-    font-size: 2rem;
-    opacity: .5;
-    color: blue;
+  background-image: url(https://cdn.imgchest.com/files/myd5crddq4b.png);
+  background-repeat: no-repeat;
+  max-width: 1143px;
+  min-height: 1583px;
+  font-size: 2rem;
+  opacity: 0.5;
+  color: blue;
+}
+.container > * {
+  border: 2px dashed blue;
 }
 
 .container {
-    display: grid;
-    grid-template-rows: 65px 295px 435px 340px 60px;
-    grid-template-columns: repeat(50, 1fr);
-    width: 1241px;
-    height: 1194px;
-}
+  display: grid;
+  grid-template-rows: 65px 295px 435px 340px 60px;
+  grid-template-columns: 300px 570px 370px;
 
-.container > * {
-    border: 2px dashed blue;
-    display: flex;
+  grid-template-areas:
+    "one six six"
+    "two two two"
+    "tree tree seven"
+    "four four four"
+    "five five five";
 }
 
 .box1 {
-    grid-column: 1 / 13;
-    grid-row: 1;
+  grid-area: one;
 }
 
 .box2 {
-    grid-column: 13 / 51;
-    grid-row: 1;
+  grid-area: two;
 }
 
 .box3 {
-    grid-column: 1 / -1;
-    grid-row: 2;
+  grid-area: tree;
 }
 
 .box4 {
-    grid-column: 1 / 36;
-    grid-row: 3;
+  grid-area: four;
 }
 
 .box5 {
-    grid-column: 36 / 51;
-    grid-row: 3;
+  grid-area: five;
 }
 
 .box6 {
-    grid-column: 1 / -1;
-    grid-row: 4;
+  grid-area: six;
 }
 
 .box7 {
-    grid-column: 1 / -1;
-    grid-row: 5;
+  grid-area: seven;
 }
